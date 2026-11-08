@@ -1,0 +1,19 @@
+* Buck 12V->5V, 500kHz, plus 3.3V LDO behavioral stage
+Vin in 0 12
+Vg g 0 PULSE(0 5 0 10n 10n 0.9u 2u)
+S1 in sw g 0 SW
+D1 0 sw MBR
+L1 sw out 22u Rser=30m
+C1 out 0 22u Rser=5m
+Iload out 0 PULSE(0.2 1 600u 1u 1u 300u 2m)
+
+* LDO model: 3.3V output, 40 dB PSRR (0.01 gain on input ripple)
+Bldo ldoi 0 V=3.3+0.01*(V(out)-5)
+Rldo ldoi ldo 0.1
+Cldo ldo 0 10u Rser=10m
+Rl3 ldo 0 33
+
+.model SW SW(Ron=0.1 Roff=1Meg Vt=2.5 Vh=0.1)
+.model MBR D(Is=1e-5 Rs=0.03 N=1.05 Cjo=100p)
+.tran 0 1.2m 0 20n
+.end

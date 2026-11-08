@@ -1,0 +1,22 @@
+LTspice 26.1.1 for Windows
+Circuit: C:\Users\HP\OneDrive\Documents\buck_ldo_project\spice\buck_ldo.net
+Start Time: Sun Nov  8 16:37:05 2026
+solver = Normal
+Maximum thread count: 8
+tnom = 27
+temp = 27
+method = modified trap
+Compress1stOrder = true
+Compress2ndOrder = true
+Direct Newton iteration succeeded in finding operating point.
+Total elapsed time: 0.769 seconds.
+Total iterations: 232805
+
+Files loaded:
+C:\Users\HP\OneDrive\Documents\buck_ldo_project\spice\buck_ldo.net
+C:\Users\HP\AppData\Local\LTspice\lib\cmp\standard.dio
+
+vout_ripple: PP(V(out))=0.0104279518127 FROM 0.00054 TO 0.00056
+vldo_ripple: PP(V(ldo))=8.32080841064e-05 FROM 0.00054 TO 0.00056
+il_ripple: PP(I(L1))=0.278659384698 FROM 0.00054 TO 0.00056
+vout_min: MIN(V(out))=4.47528648376 FROM 0.0006 TO 0.0009
